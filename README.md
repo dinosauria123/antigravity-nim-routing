@@ -38,6 +38,10 @@ LLM_BACKEND=nim bash llm_task.sh "Hello"
 
 Windows環境では `llm_task.bat` を使用できます。
 
+### Antigravity
+Antigravityで展開したフォルダを開いてAgent（Chat）に「.agent/rules/nim-routing のルールに従って、円周率を任意の桁で求めるWebアプリを作ってください」
+などと入力してください
+
 ## ライセンス
 
 [MIT License](LICENSE)
