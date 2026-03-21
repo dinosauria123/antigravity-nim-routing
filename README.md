@@ -2,6 +2,8 @@
 
 A script that delegates part of Antigravity's processing to an LLM (NVIDIA NIM).
 
+<img width="739" height="479" alt="IMG_1777" src="https://github.com/user-attachments/assets/cbafa4ec-a251-424e-86c1-4295005df93b" />
+
 ## Features
 
 * **Requests to NVIDIA NIM (cloud LLM)**
