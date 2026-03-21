@@ -1,47 +1,48 @@
 # Antigravity NIM Routing
 
-Antigravityの処理の一部をLLM (NVIDIA NIM) に代行させるスクリプトです。
+A script that delegates part of Antigravity's processing to an LLM (NVIDIA NIM).
 
-## 機能
+## Features
 
-- **NVIDIA NIM (クラウドLLM)** へのリクエスト
-- **Thinkingモード** の制御 (Qwen 3.5 など)
-- **JSONエスケープ処理** の自動化
+* **Requests to NVIDIA NIM (cloud LLM)**
+* **Thinking mode** control (e.g., Qwen 3.5)
+* **Automatic JSON escape handling**
 
-## セットアップ
+## Setup
 
-1. リポジトリをダウンロードまたは `git clone` します。
-2. `.env.example` をコピーして `.env` ファイルを作成します。
-3. NVIDIA NIM を使用する場合は、`.env` に `NVIDIA_API_KEY` を設定してください。
+1. Download or `git clone` the repository.
+2. Copy `.env.example` to create a `.env` file.
+3. If using NVIDIA NIM, set your `NVIDIA_API_KEY` in `.env`.
 
-```bash
+```
 cp .env.example .env
-# .env を編集して API キーを入力
+# Edit .env and enter your API key
 ```
 
-## 使い方
+## Usage
 
 ### Linux / macOS (`llm_task.sh`)
 
-```bash
-# デフォルトモデルで実行
-bash llm_task.sh "こんにちは。自己紹介してください。"
+```
+# Run with the default model
+bash llm_task.sh "Hello. Please introduce yourself."
 
-# モデルを指定して実行
-bash llm_task.sh "qwen/qwen3.5-122b-a10b" "複雑な数学の問題を解いてください。"
+# Run with a specified model
+bash llm_task.sh "qwen/qwen3.5-122b-a10b" "Please solve a complex math problem."
 
-# バックエンドを切り替えて実行 (NIMを使用)
+# Run with a switched backend (using NIM)
 LLM_BACKEND=nim bash llm_task.sh "Hello"
 ```
 
 ### Windows (`llm_task.bat`)
 
-Windows環境では `llm_task.bat` を使用できます。
+On Windows, you can use `llm_task.bat`.
 
 ### Antigravity
-Antigravityで展開したフォルダを開いてAgent（Chat）に「.agent/rules/nim-routing のルールに従って、円周率を任意の桁で求めるWebアプリを作ってください」
-などと入力してください
 
-## ライセンス
+Open the folder deployed with Antigravity and type something like the following into the Agent (Chat):  
+`"Following the rules in .agent/rules/nim-routing, please create a web app that calculates pi to an arbitrary number of digits."`
 
-[MIT License](LICENSE)
+## License
+
+[MIT License](https://github.com/dinosauria123/antigravity-nim-routing/blob/main/LICENSE
